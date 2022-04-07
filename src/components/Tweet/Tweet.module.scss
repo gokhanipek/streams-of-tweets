@@ -1,0 +1,76 @@
+.tweetContainer {
+  background: var(--background-color);
+  padding: 1rem 2rem;
+  max-width: 400px;
+  user-select: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title img {
+  width: 50px;
+  border-radius: 10rem;
+  margin-right: 1rem;
+}
+
+.info h4 {
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  color: var(--secondary-text-color);
+}
+
+.info p {
+  font-size: 0.8rem;
+  color: gray;
+  line-height: 1.2rem;
+  color: var(--secondary-text-color);
+}
+
+.tweet {
+  padding: 0.8rem 0;
+  cursor: text;
+}
+.tweet p {
+  color: var(--secondary-text-color);
+  font-size: 1.2rem;
+}
+
+.timeAndDate {
+  color: gray;
+}
+
+.timeAnDate p span {
+  color: #1da1f2;
+}
+
+.bottomSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.7rem 0;
+  place-items: left;
+}
+
+.likeButton {
+  svg {
+    width: 1.25em;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.7;
+    fill: white;
+  }
+  &.red {
+    svg {
+      fill: crimson;
+    }
+  }
+}
+
+.likeButton svg:hover {
+  opacity: 1;
+}
+  
