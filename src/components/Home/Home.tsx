@@ -34,25 +34,24 @@ const Home: React.FC = () => {
     }
 
     const tabTweetsStream = reversedList?.map(
-      item => {
-        return Boolean(item) ? <TweetComponent 
+      item => <TweetComponent 
           account={item?.account} 
           timestamp={item?.timestamp} 
           content={item?.content}
-        /> : <div>nothing here</div>
-      } 
+        />
     )
 
-    const tabLikes = likes?.map(
-      item => <>
-          <button onClick={onClickHandler}>Clear All Likes</button>
-          <TweetComponent 
-            account={item?.account} 
-            timestamp={item?.timestamp} 
-            content={item?.content}
-          />
-      </>
-    )
+    const tabLikes = <>
+      {Boolean(likes.length) && <button onClick={onClickHandler}>Clear All {likes.length} Likes</button>}
+      {likes?.map(
+        item => 
+            <TweetComponent 
+              account={item?.account} 
+              timestamp={item?.timestamp} 
+              content={item?.content}
+            />
+      )}
+    </>
 
     const noTweets = 
     <div className={styles.twitterIcon}>

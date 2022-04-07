@@ -28,7 +28,7 @@ export default function tweetsReducer(state = initialState, action: actions.Twee
           ...state,
           likes: state.likes.filter(item => {
               if(item.timestamp === action.tweet.timestamp) {
-                return item.account !== action.tweet.account
+                return item.content !== action.tweet.content
               }
               return state
             }
